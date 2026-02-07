@@ -1,4 +1,13 @@
-import math
-r = float(input("Enter radius of circle: "))
-area = math.pi * (r * 2)
-print("The area of the circle with radius "+ str(r) + " is: " + str(area))
+names_set = set()
+while True:
+    name = input("Enter a name(or press Enter to finish): ").strip()
+    if name == "":
+        break
+    if name in names_set:
+        print("Existing name")
+    else:
+        print("New name")
+        names_set.add(name)
+        print("\nList of entered names:")
+        for name in names_set:
+            print(name)
